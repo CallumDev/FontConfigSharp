@@ -1,0 +1,22 @@
+# Folders
+obj/
+[Bb]in/
+[Dd]ebug/
+[Rr]elease/
+
+# Files
+*.suo
+*.userprefs
+
+# Gedit backups
+*~
+
+# OSX-specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# Windows-specific files
+Thumbs.db
