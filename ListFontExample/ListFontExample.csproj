@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CBBDC35F-DCA3-453C-A9E3-29EE7E43DE85}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>FontConfigSharp</RootNamespace>
-    <AssemblyName>FontConfigSharp</AssemblyName>
+    <ProjectGuid>{E6F92E56-F21A-4284-BDEE-759F2D3F865F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ListFontExample</RootNamespace>
+    <AssemblyName>ListFontExample</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -17,7 +17,7 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+    <Externalconsole>true</Externalconsole>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -25,20 +25,20 @@
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+    <Externalconsole>true</Externalconsole>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FcResult.cs" />
-    <Compile Include="FcFontSet.cs" />
-    <Compile Include="FcConfig.cs" />
-    <Compile Include="Native.cs" />
-    <Compile Include="Fc.cs" />
-    <Compile Include="FcPattern.cs" />
-    <Compile Include="FcObjectSet.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\FontConfigSharp\FontConfigSharp.csproj">
+      <Project>{CBBDC35F-DCA3-453C-A9E3-29EE7E43DE85}</Project>
+      <Name>FontConfigSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
