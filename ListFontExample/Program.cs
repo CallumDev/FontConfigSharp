@@ -4,6 +4,7 @@ namespace ListFontExample
 {
 	class MainClass
 	{
+		//Lists all .ttf and .otf fonts provided by FontConfig
 		public static void Main (string[] args)
 		{
 			var config = Fc.InitLoadConfigAndFonts ();

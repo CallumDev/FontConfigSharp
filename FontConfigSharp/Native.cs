@@ -27,7 +27,14 @@ namespace FontConfigSharp
 		public static extern void FcPatternDestroy (IntPtr p);
 		[DllImport("libfontconfig.so")]
 		public static extern void FcObjectSetDestroy (IntPtr os);
-
+		[DllImport("libfontconfig.so")]
+		public static extern IntPtr FcNameParse ([MarshalAs(UnmanagedType.LPStr)]string name);
+		[DllImport("libfontconfig.so")]
+		public static extern void FcDefaultSubstitute (IntPtr pattern);
+		[DllImport("libfontconfig.so")]
+		public static extern int FcConfigSubstitute (IntPtr config, IntPtr p, FcMatchKind kind);
+		[DllImport("libfontconfig.so")]
+		public static extern IntPtr FcFontMatch (IntPtr config, IntPtr p, out FcResult result);
 	}
 }
 

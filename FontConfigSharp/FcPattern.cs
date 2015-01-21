@@ -25,6 +25,26 @@ namespace FontConfigSharp
 			return result;
 		}
 
+		public FcPattern Match(FcConfig config, out FcResult result)
+		{
+			return new FcPattern (Native.FcFontMatch (config.Handle, Handle, out result));
+		}
+
+		public void DefaultSubstitute()
+		{
+			Native.FcDefaultSubstitute (Handle);
+		}
+
+		public bool ConfigSubstitute(FcConfig config, FcMatchKind kind)
+		{
+			return Native.FcConfigSubstitute (config.Handle, Handle, kind) != 0;
+		}
+
+		public static FcPattern FromFamilyName(string name)
+		{
+			return new FcPattern (Native.FcNameParse (name));
+		}
+
 		public void Dispose()
 		{
 			Native.FcPatternDestroy (Handle);

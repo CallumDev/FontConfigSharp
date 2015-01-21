@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontConfigSharp", "FontConfigSharp\FontConfigSharp.csproj", "{CBBDC35F-DCA3-453C-A9E3-29EE7E43DE85}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{E9B5BA71-3EA1-4687-B307-E2CE373E7CEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindFontExample", "FindFontExample\FindFontExample.csproj", "{8DDEF88C-5364-4008-8A24-4BE7431260F3}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListFontExample", "ListFontExample\ListFontExample.csproj", "{E6F92E56-F21A-4284-BDEE-759F2D3F865F}"
 EndProject
 Global
@@ -11,6 +15,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DDEF88C-5364-4008-8A24-4BE7431260F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DDEF88C-5364-4008-8A24-4BE7431260F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DDEF88C-5364-4008-8A24-4BE7431260F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DDEF88C-5364-4008-8A24-4BE7431260F3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CBBDC35F-DCA3-453C-A9E3-29EE7E43DE85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CBBDC35F-DCA3-453C-A9E3-29EE7E43DE85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBBDC35F-DCA3-453C-A9E3-29EE7E43DE85}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -19,5 +27,9 @@ Global
 		{E6F92E56-F21A-4284-BDEE-759F2D3F865F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6F92E56-F21A-4284-BDEE-759F2D3F865F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6F92E56-F21A-4284-BDEE-759F2D3F865F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8DDEF88C-5364-4008-8A24-4BE7431260F3} = {E9B5BA71-3EA1-4687-B307-E2CE373E7CEC}
+		{E6F92E56-F21A-4284-BDEE-759F2D3F865F} = {E9B5BA71-3EA1-4687-B307-E2CE373E7CEC}
 	EndGlobalSection
 EndGlobal
