@@ -17,7 +17,7 @@ namespace FontConfigSharp
 		internal FcFontSet(IntPtr handle)
 		{
 			this.handle = handle;
-			fset = Marshal.PtrToStructure<_FcFontSet> (handle);
+			fset = (_FcFontSet)Marshal.PtrToStructure(handle, typeof(_FcFontSet));
 		}
 
 		public FcPattern this[int index]
