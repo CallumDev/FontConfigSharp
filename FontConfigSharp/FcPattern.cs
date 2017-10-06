@@ -25,6 +25,11 @@ namespace FontConfigSharp
 			return result;
 		}
 
+		public void AddCharSet(string name, FcCharSet fcs)
+		{
+			Native.FcPatternAddCharSet(Handle, name, fcs.Handle);
+		}
+
 		public FcPattern Match(FcConfig config, out FcResult result)
 		{
 			return new FcPattern (Native.FcFontMatch (config.Handle, Handle, out result));
