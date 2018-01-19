@@ -4,44 +4,46 @@ namespace FontConfigSharp
 {
 	internal static class Native
 	{
-		[DllImport("libfontconfig.so")]
+		public const string LIB = "libfontconfig.so.1";
+
+		[DllImport(LIB)]
 		public static extern IntPtr FcInitLoadConfigAndFonts();
-		[DllImport("libfontconfig.so")]
+		[DllImport(LIB)]
 		public static extern IntPtr FcPatternCreate();
-		[DllImport("libfontconfig.so")]
+		[DllImport(LIB)]
 		public static extern IntPtr FcFontList (IntPtr config, IntPtr p, IntPtr os);
 		//this is varargs
-		[DllImport("libfontconfig.so")]
+		[DllImport(LIB)]
 		public static extern IntPtr FcObjectSetCreate();
-		[DllImport("libfontconfig.so")]
+		[DllImport(LIB)]
 		public static extern void FcFontSetDestroy (IntPtr fs);
-		[DllImport("libfontconfig.so")]
+		[DllImport(LIB)]
 		public static extern int FcObjectSetAdd (IntPtr os, [MarshalAs(UnmanagedType.LPStr)]string obj);
-		[DllImport("libfontconfig.so")]
+		[DllImport(LIB)]
 		public static extern FcResult FcPatternGetString (
 			IntPtr p,
 			[MarshalAs (UnmanagedType.LPStr)]string obj,
 			int n,
 			ref IntPtr s);
-		[DllImport("libfontconfig.so")]
+		[DllImport(LIB)]
 		public static extern void FcPatternDestroy (IntPtr p);
-		[DllImport("libfontconfig.so")]
+		[DllImport(LIB)]
 		public static extern void FcObjectSetDestroy (IntPtr os);
-		[DllImport("libfontconfig.so")]
+		[DllImport(LIB)]
 		public static extern IntPtr FcNameParse ([MarshalAs(UnmanagedType.LPStr)]string name);
-		[DllImport("libfontconfig.so")]
+		[DllImport(LIB)]
 		public static extern void FcDefaultSubstitute (IntPtr pattern);
-		[DllImport("libfontconfig.so")]
+		[DllImport(LIB)]
 		public static extern int FcConfigSubstitute (IntPtr config, IntPtr p, FcMatchKind kind);
-		[DllImport("libfontconfig.so")]
+		[DllImport(LIB)]
 		public static extern IntPtr FcFontMatch (IntPtr config, IntPtr p, out FcResult result);
-		[DllImport("libfontconfig.so")]
+		[DllImport(LIB)]
 		public static extern IntPtr FcCharSetCreate();
-		[DllImport("libfontconfig.so")]
+		[DllImport(LIB)]
 		public static extern IntPtr FcCharSetAddChar(IntPtr fcs, uint ucs4);
-		[DllImport("libfontconfig.so")]
+		[DllImport(LIB)]
 		public static extern bool FcPatternAddCharSet(IntPtr p, string obj, IntPtr c);
-		[DllImport("libfontconfig.so")]
+		[DllImport(LIB)]
 		public static extern void FcCharSetDestroy(IntPtr fcs);
 	}
 }
