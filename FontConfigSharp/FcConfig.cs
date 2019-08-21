@@ -9,6 +9,10 @@ namespace FontConfigSharp
 		{
 			Handle = handle;
 		}
-	}
+        public void SetCurrent()
+        {
+            Native.FcConfigSetCurrent(Handle);
+        }
+    }
 }
 

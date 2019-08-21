@@ -45,6 +45,8 @@ namespace FontConfigSharp
 		public static extern bool FcPatternAddCharSet(IntPtr p, string obj, IntPtr c);
 		[DllImport(LIB)]
 		public static extern void FcCharSetDestroy(IntPtr fcs);
+        [DllImport(LIB)]
+        public static extern bool FcConfigSetCurrent(IntPtr fcconfig);
 	}
 }
 
